@@ -1,0 +1,46 @@
+<style type="text/css" media="screen">
+textarea {
+    display: none;
+}
+
+#textarea-div {
+    -moz-appearance: textfield-multiline;
+    -webkit-appearance: textarea;
+    border: 1px solid gray;
+    font: medium -moz-fixed;
+    font: -webkit-small-control;
+    height: 130px;
+    overflow: auto;
+    padding: 2px;
+    resize: both;
+    width: 400px;
+}
+
+input {
+    display: none;
+}
+
+#input {
+    -moz-appearance: textfield;
+    -webkit-appearance: textfield;
+    background-color: white;
+    background-color: -moz-field;
+    border: 1px solid darkgray;
+    box-shadow: 1px 1px 1px 0 lightgray inset;  
+    font: -moz-field;
+    font: -webkit-small-control;
+    margin-top: 5px;
+    padding: 2px 3px;
+    width: 398px;    
+}	
+</style>
+
+<span ng-if="textarea">
+	<textarea ng-model="textarea">{{text}}</textarea>
+	<div id="textarea-div" contenteditable ng-focus="focus($event)" ng-blur="blured($event)" ng-keypress="changed($event)">{{placeholder}}</div>
+</span>
+
+<span ng-if="input">
+	<input value="{{text}}"  ng-model="input" />
+	<div id="input" contenteditable ng-focus="focus($event)" ng-blur="blured($event)" ng-keypress="changed($event)">{{placeholder}}</div>
+</span>

@@ -1,0 +1,21 @@
+{
+    "name": "editable-div",
+    "version": "1.0.0",
+    "description": "An AngularJS directive for add an editable div",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/Mehrdad-Dadkhah/ng-editable-div.git"
+    },
+    "keywords": [
+        "editable-div",
+        "input",
+        "textarea",
+        "javascript"
+    ],
+    "author": "mehrdad@dadkhah.me",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/Mehrdad-Dadkhah/ng-editable-div/issues"
+    },
+    "homepage": "https://github.com/Mehrdad-Dadkhah/ng-editable-div"
+}
