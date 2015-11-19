@@ -1,9 +1,9 @@
 <style type="text/css" media="screen">
-textarea {
+#editable-div-container textarea {
     display: none;
 }
 
-#textarea-div {
+#editable-div-container #textarea-div {
     -moz-appearance: textfield-multiline;
     -webkit-appearance: textarea;
     border: 1px solid gray;
@@ -16,11 +16,11 @@ textarea {
     width: 400px;
 }
 
-input {
+#editable-div-container input {
     display: none;
 }
 
-#input {
+#editable-div-container #input {
     -moz-appearance: textfield;
     -webkit-appearance: textfield;
     background-color: white;
@@ -31,17 +31,22 @@ input {
     font: -webkit-small-control;
     margin-top: 5px;
     padding: 2px 3px;
-    width: 398px;
+    min-width: 120px;
     min-height: 30px;
-}	
+    word-wrap: break-word;
+    padding: 5px;
+    font-size: 0.85em;
+    color: #4a4444;
+}   
 </style>
+<div id="editable-div-container">
+    <span ng-if="textarea">
+    	<textarea ng-model="textarea">{{text}}</textarea>
+    	<div id="textarea-div" contenteditable ng-focus="focus($event)" ng-blur="blured($event)" ng-keypress="changed($event)">{{placeholder}}</div>
+    </span>
 
-<span ng-if="textarea">
-	<textarea ng-model="textarea">{{text}}</textarea>
-	<div id="textarea-div" contenteditable ng-focus="focus($event)" ng-blur="blured($event)" ng-keypress="changed($event)">{{placeholder}}</div>
-</span>
-
-<span ng-if="input">
-	<input value="{{text}}"  ng-model="input" />
-	<div id="input" contenteditable ng-focus="focus($event)" ng-blur="blured($event)" ng-keypress="changed($event)">{{placeholder}}</div>
-</span>
+    <span ng-if="input">
+    	<input value="{{text}}"  ng-model="input" />
+    	<div id="input" contenteditable ng-focus="focus($event)" ng-blur="blured($event)" ng-keypress="changed($event)">{{placeholder}}</div>
+    </span>
+</div>
