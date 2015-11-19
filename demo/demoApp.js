@@ -1,4 +1,4 @@
-var demoApp = angular.module('demoApp',['directives']);
+var demoApp = angular.module('demoApp',['ngEditableDiv']);
 
 var testController = demoApp.controller('testController',['$scope', function($scope){
 

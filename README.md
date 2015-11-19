@@ -24,7 +24,7 @@ Table of Content:
 ```html
 <script src="../src/jquery.min.js" type="text/javascript"></script>
 <script src="../src/angular.min.js" type="text/javascript"></script>
-<script src="../src/editablediv.js" type="text/javascript"></script>
+<script src="../src/ngEditableDiv.js" type="text/javascript"></script>
 ```
 
 ##<a name="usage"></a> Usage
